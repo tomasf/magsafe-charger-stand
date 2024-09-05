@@ -17,3 +17,4 @@ The stand is designed to be compatible with Apple's official MagSafe charger as 
 6. **Cable management**: Tuck the charger cable into the channel on the bottom of the base to keep everything tidy.
 
 This model uses [SwiftSCAD](https://github.com/tomasf/SwiftSCAD) and [Helical](https://github.com/tomasf/Helical).
+Also available on [Printables](https://www.printables.com/model/997361-magsafe-charger-stand).
