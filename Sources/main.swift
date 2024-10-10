@@ -1,4 +1,4 @@
-@testable import SwiftSCAD
+import SwiftSCAD
 
 struct Charger {
     let name: String
@@ -17,7 +17,7 @@ save(environment: .defaultEnvironment.withTolerance(0.3)) {
     for charger in allChargers {
         let top = Top(charger: charger)
         top
-            .named("top-\(charger.name)")
+            .named("magsafe-stand-top-\(charger.name)")
 
         for useWeightNuts in [false, true] {
             let suffix = useWeightNuts ? "-weighted" : ""
@@ -25,7 +25,7 @@ save(environment: .defaultEnvironment.withTolerance(0.3)) {
 
             base
                 .forceRendered()
-                .named("base\(suffix)-\(charger.name)")
+                .named("magsafe-stand-base\(suffix)-\(charger.name)")
 
             base
                 .attaching {
@@ -34,7 +34,7 @@ save(environment: .defaultEnvironment.withTolerance(0.3)) {
                         .translated(x: top.mountOffset, z: top.thickness)
                 }
                 .forceRendered()
-                .named("assembled\(suffix)-\(charger.name)")
+                .named("magsafe-stand-assembled\(suffix)-\(charger.name)")
         }
     }
 }
