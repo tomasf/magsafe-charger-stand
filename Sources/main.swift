@@ -14,10 +14,12 @@ let allChargers = [
 ]
 
 save(environment: .defaultEnvironment.withTolerance(0.3)) {
+    let prefix = "magsafe-stand-v1.1-"
+
     for charger in allChargers {
         let top = Top(charger: charger)
         top
-            .named("magsafe-stand-top-\(charger.name)")
+            .named(prefix + "top-\(charger.name)")
 
         for useWeightNuts in [false, true] {
             let suffix = useWeightNuts ? "-weighted" : ""
@@ -25,8 +27,9 @@ save(environment: .defaultEnvironment.withTolerance(0.3)) {
 
             base
                 .forceRendered()
-                .named("magsafe-stand-base\(suffix)-\(charger.name)")
+                .named(prefix + "base\(suffix)-\(charger.name)")
 
+            /*
             base
                 .attaching {
                     top
@@ -34,7 +37,8 @@ save(environment: .defaultEnvironment.withTolerance(0.3)) {
                         .translated(x: top.mountOffset, z: top.thickness)
                 }
                 .forceRendered()
-                .named("magsafe-stand-assembled\(suffix)-\(charger.name)")
+                .named(prefix + "assembled\(suffix)-\(charger.name)")
+             */
         }
     }
 }

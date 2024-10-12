@@ -10,7 +10,7 @@ struct Base: Shape3D {
     let thickness = 2.0
     let curveAmount = 8.0
 
-    let stemInnerDiameter = 12.0
+    let stemInnerDiameter = 13.0
     let stemWallThickness = 1.0
     var stemOuterDiameter: Double { stemInnerDiameter + 2 * stemWallThickness }
     let stemBaseHeight = 8.0
@@ -38,7 +38,7 @@ struct Base: Shape3D {
             )
     }
 
-    static let stemMountScrewSpacing = 20.0
+    static let stemMountScrewSpacing = 21.0
     let stemMountScrewPostDiameter = 10.0
     let stemMountBaseHeight = 4.0
     let stemMountBaseRadius = 2.0
